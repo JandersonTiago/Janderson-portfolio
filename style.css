@@ -47,10 +47,10 @@ ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
+    display: flex;
 }
 
 li {
-    display: inline-block;
     margin-right: 20px;
 }
 
@@ -87,6 +87,8 @@ footer {
 }
 
 .index img {
+    max-width: 100%;
+    height: auto;
     border-radius: 3%;
 }
 
@@ -96,31 +98,73 @@ footer {
 
 .index a {
     color: #000;
-    text-decoration: none; /* Adicionando a decoração de texto */
 }
 
 .index a:hover {
     color: #0000FF;
-    text-decoration: underline; /* Sublinhando ao passar o mouse */
+}
+
+/* Estilos para os ícones dos links */
+.index .social-links img {
+    max-width: 30px;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    nav {
+        justify-content: center; /* Centraliza os itens da navbar em telas menores */
+    }
+
+    li {
+        margin: 10px; /* Espaçamento entre os itens da navbar */
+    }
+
+    .index {
+        grid-template-columns: 1fr;
+    }
+
+    .index img {
+        max-width: 100%; /* Tamanho máximo da imagem */
+        height: auto; /* Mantém a proporção */
+    }
+
+    .index .social-links img {
+        max-width: 20px; /* Reduzindo o tamanho dos ícones */
+    }
+
+    .index figure img {
+        max-width: 150px; /* Ajuste o tamanho máximo da foto do perfil */
+        height: auto; /* Mantém a proporção */
+    }
 }
 
 /* ESTILOS PÁGINA FORMAÇÃO */
+ul.formacao {
+    display: flex;
+    flex-wrap: wrap; /* Permite que os itens de formação quebrem para a próxima linha */
+    margin-top: 20px; /* Adiciona um espaço entre a navbar e a lista de formação */
+    padding: 0; /* Removendo o preenchimento padrão */
+}
+
 li.formacao {
-    display: block;
     margin-right: 20px;
+    width: calc(50% - 20px); /* Define a largura dos itens de formação para ocupar metade da largura da tela com margem entre eles */
+    padding: 10px; /* Adicionando preenchimento aos itens */
+    box-sizing: border-box; /* Garantindo que o preenchimento não aumente a largura total */
 }
 
 .formacao a {
     color: #0000FF;
     padding: 5px 0;
-    text-decoration: none; /* Adicionando a decoração de texto */
+    display: block; /* Transforma os links em blocos para ocupar todo o espaço disponível */
 }
 
 .formacao a:hover {
     background-color: #fff;
     color: #000099;
-    text-decoration: underline; /* Sublinhando ao passar o mouse */
+    text-decoration: underline;
 }
+
 
 /* ESTILOS PÁGINA PORTFOLIO */
 .portfolio-grid {
@@ -150,14 +194,21 @@ li.formacao {
 .portfolio-item a {
     color: #0000FF;
     padding: 5px 0;
-    text-decoration: none; /* Adicionando a decoração de texto */
 }
 
 .portfolio-item a:hover {
     background-color: #fff;
     color: #000099;
-    text-decoration: underline; /* Sublinhando ao passar o mouse */
+    text-decoration: underline;
 }
+
+/* Responsividade para o Portfólio */
+@media (max-width: 768px) {
+    .portfolio-grid {
+        grid-template-columns: 1fr; /* Exibir os itens do portfólio em uma única coluna */
+    }
+}
+
 
 /* ESTILOS PÁGINA CONTATO */
 .form-group {
@@ -223,36 +274,4 @@ button:hover {
 .social-links a:hover {
     color: #000099;
     text-decoration: underline;
-}
-
-/* RESPONSIVIDADE */
-@media (max-width: 768px) {
-    .index {
-        grid-template-columns: 1fr;
-    }
-
-    .portfolio-grid {
-        grid-template-columns: 1fr 1fr;
-        gap: 10px;
-    }
-
-    .index img {
-        width: 100%;
-        height: auto;
-    }
-}
-
-@media (max-width: 480px) {
-    .portfolio-grid {
-        grid-template-columns: 1fr;
-    }
-
-    nav ul {
-        text-align: center;
-    }
-
-    nav ul li {
-        display: block;
-        margin: 10px 0;
-    }
 }
