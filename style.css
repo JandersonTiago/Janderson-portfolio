@@ -96,10 +96,12 @@ footer {
 
 .index a {
     color: #000;
+    text-decoration: none; /* Adicionando a decoração de texto */
 }
 
 .index a:hover {
     color: #0000FF;
+    text-decoration: underline; /* Sublinhando ao passar o mouse */
 }
 
 /* ESTILOS PÁGINA FORMAÇÃO */
@@ -111,12 +113,13 @@ li.formacao {
 .formacao a {
     color: #0000FF;
     padding: 5px 0;
+    text-decoration: none; /* Adicionando a decoração de texto */
 }
 
 .formacao a:hover {
     background-color: #fff;
     color: #000099;
-    text-decoration: underline;
+    text-decoration: underline; /* Sublinhando ao passar o mouse */
 }
 
 /* ESTILOS PÁGINA PORTFOLIO */
@@ -147,12 +150,13 @@ li.formacao {
 .portfolio-item a {
     color: #0000FF;
     padding: 5px 0;
+    text-decoration: none; /* Adicionando a decoração de texto */
 }
 
 .portfolio-item a:hover {
     background-color: #fff;
     color: #000099;
-    text-decoration: underline;
+    text-decoration: underline; /* Sublinhando ao passar o mouse */
 }
 
 /* ESTILOS PÁGINA CONTATO */
