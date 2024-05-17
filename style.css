@@ -1,0 +1,254 @@
+/* ESTILOS GERAIS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    min-height: 100vh;
+}
+
+h1 {
+    font-size: 2em; 
+    margin-bottom: 0.5em;
+}
+
+h2 {
+    font-size: 1em;
+    margin-bottom: 0.5em;
+}
+
+p {
+    font-size: 1em;
+    margin-bottom: 0.5em;
+    text-align: justify;
+}
+
+main {
+    padding: 20px;
+}
+
+/* ESTILOS NAVBAR */
+header {
+    background-color: #000;
+    padding: 20px;
+}
+
+nav {
+    text-align: left;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+a {
+    color: #fff;
+    text-decoration: none;
+    padding: 14px 16px;
+}
+
+li a:hover {
+    background-color: #333;
+}
+
+/* ESTILOS FOOTER */
+footer {
+    background-color: #000;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+/* ESTILOS PÁGINA INICIAL */
+.index {
+    display: grid;
+    grid-template-columns: 1fr 250px;
+    gap: 20px;
+    padding: 20px;
+    align-items: start;
+}
+
+.index figure {
+    margin: 0;
+    text-align: center;
+}
+
+.index img {
+    border-radius: 3%;
+}
+
+.index article {
+    max-width: auto;
+}
+
+.index a {
+    color: #000;
+}
+
+.index a:hover {
+    color: #0000FF;
+}
+
+/* ESTILOS PÁGINA FORMAÇÃO */
+li.formacao {
+    display: block;
+    margin-right: 20px;
+}
+
+.formacao a {
+    color: #0000FF;
+    padding: 5px 0;
+}
+
+.formacao a:hover {
+    background-color: #fff;
+    color: #000099;
+    text-decoration: underline;
+}
+
+/* ESTILOS PÁGINA PORTFOLIO */
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+.portfolio-item {
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    text-align: center;
+}
+
+.portfolio-item img {
+    width: 30px;
+    height: 30px;
+    border-radius: 5px;
+}
+
+.portfolio-item p {
+    text-align: justify;
+    font-size: small;
+}
+
+.portfolio-item a {
+    color: #0000FF;
+    padding: 5px 0;
+}
+
+.portfolio-item a:hover {
+    background-color: #fff;
+    color: #000099;
+    text-decoration: underline;
+}
+
+/* ESTILOS PÁGINA CONTATO */
+.form-group {
+    margin-bottom: 10px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    max-width: 500px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+textarea {
+    resize: vertical;
+}
+
+button {
+    display: inline-block;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #0000FF;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #000099;
+}
+
+
+/* ESTILOS SOCIAL LINKS */
+.social-links {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    gap: 10px;
+    margin-top: 50px;
+}
+
+.social-links img {
+    margin: 0 5px; /* Espaçamento horizontal para as imagens */
+}
+
+.social-links a {
+    text-decoration: none;
+    color: #0000FF;
+    font-weight: bold;
+}
+
+.social-links a:hover {
+    color: #000099;
+    text-decoration: underline;
+}
+
+/* RESPONSIVIDADE */
+@media (max-width: 768px) {
+    .index {
+        grid-template-columns: 1fr;
+    }
+
+    .portfolio-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+    }
+
+    .index img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .portfolio-grid {
+        grid-template-columns: 1fr;
+    }
+
+    nav ul {
+        text-align: center;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+}
